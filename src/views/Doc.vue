@@ -8,10 +8,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import TopNav from '../components/TopNav.vue'
   import Aside from '../Doc/Aside.vue'
   import Main from '../Doc/Main.vue'
+
   export default {
     components: {TopNav, Aside, Main}
   }

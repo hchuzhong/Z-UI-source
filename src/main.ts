@@ -6,10 +6,11 @@ import Doc from './views/Doc.vue'
 import SwitchDemo from './Doc/SwitchDemo.vue'
 import IconDemo from './Doc/IconDemo.vue'
 import ButtonDemo from './Doc/ButtonDemo.vue'
+import './index.scss'
 
-const routerHistory = createWebHistory()
+const history = createWebHistory()
 const router = createRouter({
-  history: routerHistory,
+  history,
   routes: [
     {
       path: '/',
