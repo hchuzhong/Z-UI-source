@@ -2,8 +2,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
 import Doc from './views/Doc.vue'
 import SwitchDemo from './Doc/SwitchDemo.vue'
-import IconDemo from './Doc/IconDemo.vue'
+import DialogDemo from './Doc/DialogDemo.vue'
 import ButtonDemo from './Doc/ButtonDemo.vue'
+import TabsDemo from './Doc/TabsDemo.vue'
+import DocDemo from './components/DocDemo.vue'
 
 const history = createWebHistory()
 export const router = createRouter({
@@ -17,9 +19,11 @@ export const router = createRouter({
       path: '/Doc',
       component: Doc,
       children: [
+        {path: '', component: DocDemo},
         {path: 'switch', component: SwitchDemo},
-        {path: 'icon', component: IconDemo},
-        {path: 'button', component: ButtonDemo}
+        {path: 'dialog', component: DialogDemo},
+        {path: 'button', component: ButtonDemo},
+        {path: 'tabs', component: TabsDemo}
       ]
     }
   ]

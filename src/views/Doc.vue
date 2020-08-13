@@ -1,6 +1,6 @@
 <template>
-  <div class="doc">
-    <TopNav/>
+  <div class="layout">
+    <TopNav class="nav"/>
     <div class="content">
       <Aside/>
       <Main/>
@@ -19,16 +19,23 @@
 </script>
 
 <style lang="scss" scoped>
-  .doc {
+  .layout {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    > .nav{
+      flex-shrink: 0;
+    }
+    .content {
+      flex-grow: 1;
+      padding-top: 60px;
+      padding-left: 156px;
+      @media (max-width: 500px) {
+        padding-left: 0;
+      }
+    }
     .content {
       display: flex;
-      flex-grow: 1;
-      max-width: 1000px;
-      width: 100%;
-      margin: 0 auto;
     }
   }
 </style>

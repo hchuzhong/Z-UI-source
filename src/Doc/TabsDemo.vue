@@ -1,5 +1,5 @@
 <template>
   <div>
-    Icon Demo
+    Tabs Demo
   </div>
 </template>
