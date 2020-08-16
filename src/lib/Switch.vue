@@ -1,5 +1,5 @@
 <template>
-  <button @click="toggle" :class="{checked: value}"><span></span></button>
+  <button class="z-switch" @click="toggle" :class="{'z-checked': value}"><span></span></button>
 </template>
 
 <script lang="ts">
@@ -16,17 +16,17 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $h: 22px;
   $h2: $h - 4px;
-  button {
+  .z-switch {
     height: $h;
     width: $h * 2;
     border: none;
     background: #bfbfbf;
     border-radius: $h / 2;
     position: relative;
-    &.checked {
+    &.z-checked {
       background: #1890ff;
       > span {
         left: calc(100% - #{$h2} - 2px);
@@ -38,7 +38,7 @@
     &:active{
       > span {width: $h2 + 4px;}
     }
-    &.checked:active{
+    &.z-checked:active{
       > span {width: $h2 + 4px; margin-left: -4px;}
     }
   }
