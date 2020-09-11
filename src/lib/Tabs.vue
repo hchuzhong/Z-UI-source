@@ -6,8 +6,7 @@
       </div>
     </div>
     <div class="z-tabs-content">
-      <component class="z-tabs-content-item" :is="current"/>
-      {{current}}
+      <component class="z-tabs-content-item" v-for="c in defaults" :is="c" :class="{selected: c.props.title === selected}"/>
     </div>
   </div>
 </template>
@@ -76,6 +75,12 @@
 
     &-content {
       padding: 8px 0;
+      &-item{
+        display: none;
+        &.selected{
+          display: block;
+        }
+      }
     }
   }
 </style>
