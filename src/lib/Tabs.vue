@@ -12,17 +12,14 @@
            ref="indicator"></div>
     </div>
     <div class="z-tabs-content">
-      <component class="z-tabs-content-item"
-                 v-for="c in defaults"
-                 :is="c"
-                 :class="{selected: c.props.title === selected}"/>
+      <component :is="current" :key="current.props.title"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
   import Tab from './Tab.vue';
-  import {ref, onMounted, watchEffect} from 'vue';
+  import {ref, onMounted, watchEffect, computed} from 'vue';
 
   export default {
     props: {
@@ -50,6 +47,9 @@
           throw new Error('Tabs 子标签必须是 Tab');
         }
       });
+      const current = computed(() => {
+        return defaults.find(tag => tag.props.title === props.selected)
+      })
       const titles = defaults.map((tag) => {
         return tag.props.title;
       });
@@ -57,7 +57,7 @@
         context.emit('update:selected', title);
       };
       return {
-        selectedItem, indicator, container, defaults, titles, select
+        selectedItem, indicator, container, defaults, titles, select, current
       };
     }
 
@@ -102,14 +102,6 @@
 
     &-content {
       padding: 8px 0;
-
-      &-item {
-        display: none;
-
-        &.selected {
-          display: block;
-        }
-      }
     }
   }
 </style>
