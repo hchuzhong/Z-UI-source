@@ -1,7 +1,9 @@
 <template>
   <div class="topNav">
     <div class="logo">
-      <router-link to="/">Z-UI</router-link>
+      <svg class="icon">
+        <use xlink:href="#icon-z"></use>
+      </svg>
     </div>
     <ul class="menu">
       <li>文档</li>
@@ -26,8 +28,10 @@
 </script>
 
 <style lang="scss" scoped>
+  $color: #007974;
+
   .topNav {
-    background: pink;
+    color: $color;
     display: flex;
     padding: 16px;
     position: fixed;
@@ -41,6 +45,10 @@
     > .logo {
       max-width: 6em;
       margin-right: auto;
+      > svg {
+        width: 32px;
+        height: 32px;
+      }
     }
 
     > .menu {
