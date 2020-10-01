@@ -4,7 +4,7 @@
       <TopNav/>
       <div class="banner">
         <h1>Z-UI</h1>
-        <h2>基于 Vue 3 和 TypeScript 的 UI 框架</h2>
+        <h2>基于 Vue 3 和 TS 的 UI 框架</h2>
         <div class="actions">
           <router-link to="/doc">开始</router-link>
           <a href="https://github.com/hchuzhong?tab=repositories">GitHub</a>
@@ -26,7 +26,7 @@
           <use xlink:href="#icon-ts"></use>
         </svg>
         <h3>基于 TypeScript </h3>
-        <p>源代码采用 TypeScript 书写（非严格检查）</p>
+        <p>源代码采用 TypeScript 书写</p>
       </li>
       <li>
         <svg>
@@ -60,7 +60,6 @@
 
   .features {
     margin: 64px auto;
-    width: 400px;
     @media (min-width: 800px) {
       width: 800px;
     }

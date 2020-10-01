@@ -45,7 +45,7 @@
   $border-color: #d9d9d9;
   .demo {
     border: 1px solid $border-color;
-    margin: 16px 0 32px;
+    margin: 16px 0 32px 0;
     >h2 {
       font-size: 20px;
       padding: 8px 16px;
@@ -57,8 +57,9 @@
     &-actions {
       padding: 8px 16px;
       border-top: 1px dashed $border-color;
-    }
+    }z
     &-code {
+      overflow: scroll;
       padding: 8px 16px;
       border-top: 1px dashed $border-color;
       >pre {
