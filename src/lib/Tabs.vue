@@ -39,16 +39,10 @@
           const {left: left2} = selectedItem.value.getBoundingClientRect()
           const left = left2 - left1;
           indicator.value.style.left = left + 'px';
-        })
+        }, {flush: 'post'})
       });
       const defaults = context.slots.default();
-      console.log('default');
-      console.log(defaults);
-      console.log('Tab');
-      console.log(Tab);
       defaults.forEach((tag) => {
-        console.log('tag.type');
-        console.log(tag.type);
         if (tag.type.name !== Tab.name) {
           throw new Error('Tabs 子标签必须是 Tab');
         }
