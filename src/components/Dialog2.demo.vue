@@ -9,8 +9,7 @@
 
 <script lang="ts">
   import {h} from 'vue';
-  import Dialog from '../lib/Dialog.vue';
-  import Button from '../lib/Button.vue';
+  import {Dialog, Button} from '../lib/index';
   import {openDialog} from '../lib/openDialog';
 
   export default {
