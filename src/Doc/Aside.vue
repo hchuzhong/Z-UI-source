@@ -62,7 +62,7 @@
 <style lang="scss" scoped>
   aside {
     flex-shrink: 0;
-    background: lightblue;
+    background: #cdf4f2;
     width: 150px;
     padding: 70px 0 16px 0;
     position: fixed;
