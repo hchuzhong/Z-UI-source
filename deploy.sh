@@ -8,4 +8,4 @@ git branch -M master &&
 git remote add origin git@github.com:hchuzhong/Z-UI.git &&
 git push -f -u origin master &&
 cd ..
-echo http://hchuzhong.xyz/Z-UI/index.html#/
+echo https://hchuzhong.github.io/Z-UI/#/
