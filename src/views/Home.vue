@@ -7,7 +7,7 @@
         <h2>基于 Vue 3 和 TS 的 UI 框架</h2>
         <div class="actions">
           <router-link to="/doc">开始</router-link>
-          <a href="https://github.com/hchuzhong?tab=repositories">GitHub</a>
+          <a href="https://github.com/hchuzhong/Z-UI-source">GitHub</a>
         </div>
       </div>
     </div>
